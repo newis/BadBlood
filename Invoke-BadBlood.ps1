@@ -177,7 +177,7 @@ if ($badblood -eq 'badblood') {
    AddRandomToGroups -Domain $Domain -Userlist $AllUsers -GroupList $Grouplist -LocalGroupList $LocalGroupList -complist $Complist
 
    # ATTACK Vector Automation
-
+      <#
    # SPN Generation
    $I++
    write-host "Adding random SPNs to a few User and Computer Objects" -ForegroundColor Green
@@ -198,7 +198,7 @@ if ($badblood -eq 'badblood') {
 
    .($basescriptpath + '\AD_Attack_Vectors\ASREP_NotReqPreAuth.ps1')
    ADREP_NotReqPreAuth -UserList $ASREPUsers
-      <#
+
    write-host "Adding Weak User Passwords for a few users" -ForegroundColor Green
    Write-Progress -Activity "Adding Weak User Passwords" -Status "Progress:" -PercentComplete ($i / $totalscripts * 100)
    # get .05 percent of the all users output and asrep them
